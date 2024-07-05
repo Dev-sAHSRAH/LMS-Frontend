@@ -1,14 +1,20 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import "./form.css";
-import { useMsal } from "@azure/msal-react";
+import { useIsAuthenticated, useMsal } from "@azure/msal-react";
 
 const Form = () => {
+  const isAuthenticated = useIsAuthenticated();
+  const { accounts } = useMsal();
+  const navigate = useNavigate();
+
   const [yourComment, setYourComment] = useState("");
   const [fromDate, setFromDate] = useState("");
   const [toDate, setToDate] = useState("");
-  const { accounts } = useMsal();
-  const navigate = useNavigate();
+
+  if (!isAuthenticated) {
+    return <Navigate to="/" />;
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();

@@ -1,10 +1,17 @@
+import { useIsAuthenticated } from "@azure/msal-react";
 import "./ProfileData.css";
+import { Navigate } from "react-router-dom";
 /**
  * Renders information about the user obtained from MS Graph
  * @param props
  */
 export const ProfileData = (props) => {
-  // console.log(props.graphData);
+  const isAuthenticated = useIsAuthenticated();
+  if (!isAuthenticated) {
+    Navigate("/");
+    return;
+  }
+
   return (
     <div className="profile-container">
       <div id="profile-div">

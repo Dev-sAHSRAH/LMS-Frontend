@@ -2,11 +2,15 @@ import React, { useState, useEffect } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./Test.css";
+import { useIsAuthenticated } from "@azure/msal-react";
 import { useMsal } from "@azure/msal-react";
 import { toast } from "react-toastify";
+import { Navigate } from "react-router-dom";
 
 const Test = () => {
   const { accounts } = useMsal();
+  const isAuthenticated = useIsAuthenticated();
+
   const today = new Date();
   const previousMonth = new Date(today.getFullYear(), today.getMonth() - 1, 1);
 
@@ -23,6 +27,10 @@ const Test = () => {
     generateAttendanceTable(startDate);
   }, [startDate]);
 
+  if (!isAuthenticated) {
+    <Navigate to="/" />;
+    return;
+  }
   const generateAttendanceTable = (date) => {
     const month = date.getMonth() + 1;
     const year = date.getFullYear();

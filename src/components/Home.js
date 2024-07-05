@@ -3,11 +3,7 @@ import { useIsAuthenticated } from "@azure/msal-react";
 import { useNavigate } from "react-router-dom";
 import { SignInButton } from "./SignInButton";
 
-/**
- * Renders the sign-in page with a sign-in or sign-out button depending on whether or not a user is authenticated
- * @param props
- */
-export const Home = (props) => {
+export const Home = () => {
   const isAuthenticated = useIsAuthenticated();
   const navigate = useNavigate();
   const redirectToCalendar = () => {
@@ -37,6 +33,11 @@ export const Home = (props) => {
           Sign in with your Microsoft account to access your account.
         </p>
         {isAuthenticated ? redirectToCalendar() : <SignInButton />}
+        <div style={{ marginTop: "10px" }}>
+          <a href="/" style={{ color: "whitesmoke" }}>
+            <strong>New User?</strong>
+          </a>
+        </div>
       </div>
     </div>
   );
