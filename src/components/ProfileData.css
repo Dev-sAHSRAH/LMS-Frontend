@@ -1,0 +1,45 @@
+.profile-container {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-items: center;
+}
+#profile-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 60%;
+  margin: 20px auto;
+}
+
+#profile-div table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#profile-div th,
+#profile-div td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+#profile-div th {
+  background-color: #0078d4; /* Microsoft blue color */
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px 4px 0 0;
+}
+
+#profile-div td {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+#profile-div tr:last-child td {
+  border-bottom: none;
+}

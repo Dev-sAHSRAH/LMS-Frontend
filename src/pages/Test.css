@@ -1,0 +1,103 @@
+.weekend {
+  background-color: #b34d36;
+  color: white;
+}
+
+button {
+  background-color: #45a049;
+  border: none;
+  color: white;
+}
+
+.profileContent {
+  margin: 20px 0 0 0;
+}
+
+th,
+td {
+  border: 1px solid #ddd !important;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+input,
+select {
+  margin: 0 10px;
+}
+
+table {
+  margin: 40px auto;
+  width: 75%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+/* Consistent table cell borders */
+table,
+th,
+td {
+  border: 2px solid #131212;
+}
+
+input[type="text"] {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.form-table {
+  margin: 40px auto;
+  width: 50%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+/* Consistent form table cell borders */
+.form-table,
+.form-table th,
+.form-table td {
+  border: 2px solid black;
+  padding: 8px;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Optional: Add some margin or padding if needed */
+  margin: 20px 0;
+}
+
+.summary {
+  width: auto;
+}
+
+.horizontal-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

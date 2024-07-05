@@ -1,0 +1,86 @@
+.label-data {
+  width: 100%;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.leave-application-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.leave-application-form {
+  width: 60%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.leave-application-form h2 {
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.leave-form-group {
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+.leave-form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555555;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 14px;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+.resizable-textarea {
+  min-height: 90%;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: #1e88e5;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+button.cancel-button {
+  background-color: #eeeeee;
+  border-radius: 4px;
+  color: #555555;
+}
+
+button:hover {
+  opacity: 0.8;
+}
