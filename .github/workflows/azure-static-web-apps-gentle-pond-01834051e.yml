@@ -42,7 +42,7 @@ jobs:
           REACT_APP_REDIRECT_URI: ${{ env.REACT_APP_REDIRECT_URI }}
           REACT_APP_CLIENT_ID: ${{ env.REACT_APP_CLIENT_ID }}
           REACT_APP_TENANT_ID: ${{ env.REACT_APP_TENANT_ID }}
-          ###### End of Repository/Build Configurations ######
+          ##### End of Repository/Build Configurations #####
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
