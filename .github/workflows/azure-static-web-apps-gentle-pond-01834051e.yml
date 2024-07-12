@@ -28,9 +28,9 @@ jobs:
       - name: Build the project
         run: npm run build
         env:
-          REACT_APP_REDIRECT_URI: ${{ secrets.REACT_APP_REDIRECT_URI }}
-          REACT_APP_CLIENT_ID: ${{ secrets.REACT_APP_CLIENT_ID }}
-          REACT_APP_TENANT_ID: ${{ secrets.REACT_APP_TENANT_ID }}
+          REACT_APP_REDIRECT_URI: ${{ env.REACT_APP_REDIRECT_URI }}
+          REACT_APP_CLIENT_ID: ${{ env.REACT_APP_CLIENT_ID }}
+          REACT_APP_TENANT_ID: ${{ env.REACT_APP_TENANT_ID }}
       - name: Deploy to Azure Static Web Apps
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
